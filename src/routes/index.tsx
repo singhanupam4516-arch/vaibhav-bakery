@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-bakery.jpg";
-import cakesImg from "@/assets/cat-cakes.jpg";
-import breadsImg from "@/assets/cat-breads.jpg";
-import snacksImg from "@/assets/cat-snacks.jpg";
-import dairyImg from "@/assets/cat-dairy.jpg";
+import storefrontAsset from "@/assets/storefront.jpg.asset.json";
+import festiveAsset from "@/assets/festive-display.jpg.asset.json";
+import chocolateAsset from "@/assets/chocolate-basket.jpg.asset.json";
+import shelfAsset from "@/assets/shelf-products.jpg.asset.json";
+import sweetsAsset from "@/assets/amul-sweets.jpg.asset.json";
+import cakesImg from "@/assets/signature-cake.jpg";
+import breadsImg from "@/assets/fresh-breads.jpg";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Star, Cake, Croissant, Cookie, Milk, ArrowRight, Navigation } from "lucide-react";
@@ -20,8 +22,8 @@ const ADDRESS = "Virendra Bhawan, 555/5, opposite Damkal Kendra, Nirala Nagar, R
 const categories = [
   { title: "Signature Cakes", desc: "Fresh cream, chocolate truffle, black forest, pineapple & custom birthday cakes baked to order.", img: cakesImg, icon: Cake },
   { title: "Breads & Buns", desc: "Soft bread loaves, pav, burger buns and rusks — baked fresh every morning.", img: breadsImg, icon: Croissant },
-  { title: "Snacks & Cookies", desc: "Veg puffs, patties, khari, cream rolls, biscuits and tea-time favourites.", img: snacksImg, icon: Cookie },
-  { title: "Amul Products", desc: "Butter, cheese, milk, ghee, dahi, ice cream and the full Amul range — always in stock.", img: dairyImg, icon: Milk },
+  { title: "Cookies & Chocolates", desc: "Amul milk chocolate, Fruit 'n' Nut, Dark Passion, butter cookies, rusks and tea-time favourites.", img: shelfAsset.url, icon: Cookie },
+  { title: "Amul Sweets & Dairy", desc: "Rasgulla, Gulab Jamun, ghee, butter, cheese, ice cream and the complete Amul range — always in stock.", img: sweetsAsset.url, icon: Milk },
 ];
 
 function Index() {
@@ -49,10 +51,10 @@ function Index() {
 
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroImg} alt="Fresh cakes, breads and Amul products at Vaibhav Bakery" width={1600} height={1100} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
+          <img src={storefrontAsset.url} alt="Vaibhav Bakery storefront in Nirala Nagar, Raebareli — Amul outlet decorated with pink balloons" width={1600} height={1100} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
         </div>
-        <div className="max-w-6xl mx-auto px-5 py-24 md:py-36">
+        <div className="max-w-6xl mx-auto px-5 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium">
               <Star className="w-3.5 h-3.5 fill-accent text-accent" />
@@ -81,6 +83,31 @@ function Index() {
             <div className="mt-10 flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" /><span>Open today · 6 AM – 10 PM</span></div>
               <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /><span>Nirala Nagar, Raebareli</span></div>
+            </div>
+          </div>
+          <div className="hidden md:block relative">
+            <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-40" style={{ background: "var(--gradient-warm)" }} />
+            <img src={storefrontAsset.url} alt="Vaibhav Bakery Amul store front" width={800} height={600} className="relative rounded-3xl border-4 border-card object-cover w-full h-[420px]" style={{ boxShadow: "var(--shadow-soft)" }} />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 border-b border-border">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="md:col-span-2 rounded-2xl overflow-hidden relative group" style={{ boxShadow: "var(--shadow-soft)" }}>
+              <img src={festiveAsset.url} alt="Festive Amul sweets display at Vaibhav Bakery — Rasgulla, Gulab Jamun and chocolates" width={1200} height={800} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+                <p className="text-xs font-medium text-white/80 uppercase tracking-widest">Festive Season</p>
+                <h3 className="text-2xl font-bold text-white mt-1" style={{ fontFamily: "var(--font-display)" }}>Celebrate with Amul Sweets</h3>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden relative group" style={{ boxShadow: "var(--shadow-soft)" }}>
+              <img src={chocolateAsset.url} alt="Assorted Amul chocolates hamper — Milk Chocolate, Fruit n Nut, Dark Passion, Chocominis" width={800} height={1000} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+                <p className="text-xs font-medium text-white/80 uppercase tracking-widest">Gift Hampers</p>
+                <h3 className="text-2xl font-bold text-white mt-1" style={{ fontFamily: "var(--font-display)" }}>Chocolate Baskets</h3>
+              </div>
             </div>
           </div>
         </div>
