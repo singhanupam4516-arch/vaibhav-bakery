@@ -22,8 +22,8 @@ const ADDRESS = "Virendra Bhawan, 555/5, opposite Damkal Kendra, Nirala Nagar, R
 const categories = [
   { title: "Signature Cakes", desc: "Fresh cream, chocolate truffle, black forest, pineapple & custom birthday cakes baked to order.", img: cakesImg, icon: Cake },
   { title: "Breads & Buns", desc: "Soft bread loaves, pav, burger buns and rusks — baked fresh every morning.", img: breadsImg, icon: Croissant },
-  { title: "Cookies & Chocolates", desc: "Amul milk chocolate, Fruit 'n' Nut, Dark Passion, butter cookies, rusks and tea-time favourites.", img: shelfAsset.url, icon: Cookie },
-  { title: "Amul Sweets & Dairy", desc: "Rasgulla, Gulab Jamun, ghee, butter, cheese, ice cream and the complete Amul range — always in stock.", img: sweetsAsset.url, icon: Milk },
+  { title: "Cookies & Chocolates", desc: "Amul milk chocolate, Fruit 'n' Nut, Dark Passion, butter cookies, rusks and tea-time favourites.", img: vaibhavbakery.jpg, icon: Cookie },
+  { title: "Amul Sweets & Dairy", desc: "Rasgulla, Gulab Jamun, ghee, butter, cheese, ice cream and the complete Amul range — always in stock.", img: vaibhavbakery1.jpg, icon: Milk },
 ];
 
 function Index() {
@@ -87,7 +87,7 @@ function Index() {
           </div>
           <div className="hidden md:block relative">
             <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-40" style={{ background: "var(--gradient-warm)" }} />
-            <img src={storefrontAsset.url} alt="Vaibhav Bakery Amul store front" width={800} height={600} className="relative rounded-3xl border-4 border-card object-cover w-full h-[420px]" style={{ boxShadow: "var(--shadow-soft)" }} />
+            <img src={vaibhavbakery2.jpg} alt="Vaibhav Bakery Amul store front" width={800} height={600} className="relative rounded-3xl border-4 border-card object-cover w-full h-[420px]" style={{ boxShadow: "var(--shadow-soft)" }} />
           </div>
         </div>
       </section>
@@ -96,14 +96,14 @@ function Index() {
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid md:grid-cols-3 gap-4">
             <div className="md:col-span-2 rounded-2xl overflow-hidden relative group" style={{ boxShadow: "var(--shadow-soft)" }}>
-              <img src={festiveAsset.url} alt="Festive Amul sweets display at Vaibhav Bakery — Rasgulla, Gulab Jamun and chocolates" width={1200} height={800} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
+              <img src={vaibhavbakery3.jpg} alt="Festive Amul sweets display at Vaibhav Bakery — Rasgulla, Gulab Jamun and chocolates" width={1200} height={800} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
                 <p className="text-xs font-medium text-white/80 uppercase tracking-widest">Festive Season</p>
                 <h3 className="text-2xl font-bold text-white mt-1" style={{ fontFamily: "var(--font-display)" }}>Celebrate with Amul Sweets</h3>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden relative group" style={{ boxShadow: "var(--shadow-soft)" }}>
-              <img src={chocolateAsset.url} alt="Assorted Amul chocolates hamper — Milk Chocolate, Fruit n Nut, Dark Passion, Chocominis" width={800} height={1000} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
+              <img src={vaibhavbakery4.jpg} alt="Assorted Amul chocolates hamper — Milk Chocolate, Fruit n Nut, Dark Passion, Chocominis" width={800} height={1000} loading="lazy" className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
                 <p className="text-xs font-medium text-white/80 uppercase tracking-widest">Gift Hampers</p>
                 <h3 className="text-2xl font-bold text-white mt-1" style={{ fontFamily: "var(--font-display)" }}>Chocolate Baskets</h3>
